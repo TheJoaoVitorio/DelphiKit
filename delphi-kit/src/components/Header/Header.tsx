@@ -1,11 +1,10 @@
 'use client';
-
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import styles from './Header.module.css';
 import Image from 'next/image';
-
-import logoPath from '../../assets/logo.png'
+import logoPath from '../../assets/logo.png';
 
 const GitHubIcon = () => (
     <svg
@@ -24,7 +23,6 @@ const GitHubIcon = () => (
     </svg>
 );
 
-
 const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'UI library', href: '/ui' },
@@ -32,24 +30,39 @@ const navLinks = [
 ];
 
 export function Header() {
-    const [activeIndex, setActiveIndex] = useState(0);
     const navRef = useRef<HTMLElement>(null);
     const indicatorRef = useRef<HTMLDivElement>(null);
+    const pathname = usePathname();
+    const router = useRouter();
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        if (navRef.current && indicatorRef.current) {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const activeIndex = navLinks.findIndex(link => link.href === pathname);
+
+    useEffect(() => {
+        if (navRef.current && indicatorRef.current && activeIndex !== -1) {
             const activeLink = navRef.current.children[activeIndex] as HTMLElement;
             if (activeLink) {
                 indicatorRef.current.style.width = `${activeLink.offsetWidth}px`;
                 indicatorRef.current.style.left = `${activeLink.offsetLeft}px`;
             }
         }
-    }, [activeIndex]);
+    }, [activeIndex, pathname, isMobile]);
 
     return (
         <header className={styles.header}>
             <div className={styles.container}>
-                <Link href="/" className={styles.logo}>
+                {!isMobile && (
                     <Link href="/" className={styles.logo}>
                         <Image
                             src={logoPath}
@@ -59,34 +72,44 @@ export function Header() {
                             className={styles.logoImage}
                         />
                     </Link>
-                </Link>
+                )}
 
                 <nav className={styles.nav} ref={navRef}>
                     {navLinks.map((link, index) => (
-                        <Link
+                        <button
                             key={link.href}
-                            href={link.href}
                             className={`${styles.navLink} ${activeIndex === index ? styles.active : ''}`}
-                            onClick={() => setActiveIndex(index)}
+                            onClick={() => router.push(link.href)}
+                            type="button"
                         >
-                            {link.name}
-                        </Link>
+                            {(isMobile && link.href === '/') ? (
+                                <Image
+                                    src={logoPath}
+                                    alt="DelphiKit Home"
+                                    width={32}
+                                    height={32}
+                                    className={styles.logoImage}
+                                />
+                            ) : (
+                                link.name
+                            )}
+                        </button>
                     ))}
-
                     <div ref={indicatorRef} className={styles.navIndicator}></div>
                 </nav>
 
-                <div className={styles.actions}>
-                    <a
-                        href="https://github.com/TheJoaoVitorio/DelphiKit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.actionButton}
-                    >
-                        <GitHubIcon />
-
-                    </a>
-                </div>
+                {!isMobile && (
+                    <div className={styles.actions}>
+                        <a
+                            href="https://github.com/TheJoaoVitorio/DelphiKit"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.actionButton}
+                        >
+                            <GitHubIcon />
+                        </a>
+                    </div>
+                )}
             </div>
         </header>
     );

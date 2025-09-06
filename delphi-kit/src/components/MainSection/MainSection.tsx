@@ -46,10 +46,10 @@ export function MainSection() {
 
                 {/* Botões de Ação */}
                 <div className={styles.buttonWrapper}>
-                    <a href="#" className={styles.primaryButton}>
+                    <a href="/ui" className={styles.primaryButton}>
                         Components <ArrowIcon />
                     </a>
-                    <a href="#" className={styles.secondaryButton}>
+                    <a href="/frameworks" className={styles.secondaryButton}>
                         Frameworks
                     </a>
                 </div>
@@ -63,7 +63,7 @@ export function MainSection() {
                         </div>
                         <ArrowIcon />
                     </a>
-                    <a href="#" className={styles.featureCard}>
+                    <a href="/docs" className={styles.featureCard}>
                         <div>
                             <h3>How to Contribute</h3>
                             <p>Contributing is easy! Just fill out a simple JSON file with the repository path, images, title, description, and tags. Your submission will help others discover great Delphi tools and resources.</p>

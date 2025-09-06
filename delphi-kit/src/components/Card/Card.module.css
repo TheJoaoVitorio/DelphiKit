@@ -1,0 +1,122 @@
+
+.main {
+    position: relative;
+}
+
+
+.card {
+    width: 15em;
+    height: 10em;
+    background-color: #252525;
+    border-radius: 7px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.main:hover .card {
+    transform: translateY(-5px);
+}
+
+.card_content {
+    width: 100%;
+    height: 100%;
+}
+
+.card_image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+    background-color: #3a3a3a;
+}
+
+.main:hover .card_image {
+    transform: scale(1.1);
+}
+
+
+.card_back {
+    position: absolute;
+    width: 15.8em;
+    height: 11em;
+    /* background-color: rgba(30, 31, 38, 0.575); */
+    background-color: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(172, 172, 172, 0.1);
+    border-radius: 7px;
+
+    top: 1em;
+    left: 0.1em;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+}
+
+.main:hover .card_back {
+    top: -2.25em;
+    left: 0;
+    transform: scale(1.1);
+    height: 13.25em;
+}
+
+
+.data {
+    display: flex;
+    margin-top: 0.5em;
+    padding-left: 0.5em;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    color: white;
+}
+
+.text_m {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+
+.btns {
+    display: flex;
+    gap: 0.5em;
+    height: 1.5em;
+    margin-top: 0.5em;
+    padding-left: 0.5em;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.7em;
+    height: 1.4em;
+    border-radius: 4px;
+    background-color: #444857;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.7em;
+    color: white;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.2s ease-in-out;
+}
+
+.main:hover .tag {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main:hover .tag:nth-child(2) {
+    transition-delay: 0.05s;
+}
+
+.main:hover .tag:nth-child(3) {
+    transition-delay: 0.1s;
+}

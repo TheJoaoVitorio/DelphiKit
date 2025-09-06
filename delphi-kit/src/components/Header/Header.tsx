@@ -95,7 +95,7 @@ export function Header() {
                             )}
                         </button>
                     ))}
-                    <div ref={indicatorRef} className={styles.navIndicator}></div>
+                    {/* <div ref={indicatorRef} className={styles.navIndicator}></div> */}
                 </nav>
 
                 {!isMobile && (

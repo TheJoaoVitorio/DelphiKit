@@ -1,0 +1,131 @@
+
+.header {
+    width: 100%;
+    padding: 1rem 0;
+    position: fixed;
+    top: 5px;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logoIcon {
+    color: #e0e0e0;
+}
+
+
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* background-color: rgba(28, 28, 30, 0.7); */
+    background-color: rgba(10, 10, 10, 0.6);
+    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.5rem;
+    border-radius: 9999px;
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    border: 1px solid rgba(172, 172, 172, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navIndicator {
+    position: absolute;
+    top: 0.5rem;
+    height: calc(100% - 1rem);
+    background-color: #333333;
+    border-radius: 9999px;
+    z-index: 0;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.navLink {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #a0a0a0;
+    text-decoration: none;
+    border-radius: 9999px;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.navLink:hover {
+    color: #ffffff;
+}
+
+.navLink.active {
+    color: #ffffff;
+}
+
+.actions {
+    display: flex;
+}
+
+.actionButton {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #121212;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.actionButton:hover {
+    background-color: #dcdcdc;
+}
+
+.actionButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #333333;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.actionButton:hover {
+    background-color: #121212;
+}
+
+.githubIcon {
+    stroke: currentColor;
+}

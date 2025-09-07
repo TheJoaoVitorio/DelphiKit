@@ -1,24 +1,24 @@
 [
     {
         "id": 1,
-        "name": "shadcn/ui",
-        "img": "https://res.cloudinary.com/cosmocloudinary/image/upload/freesets/components/shadcn",
-        "link": "https://ui.shadcn.com",
-        "tags": [
-            "React",
-            "Tailwind",
-            "Chart"
+        "name": "Alcinoe",
+        "img": "https://raw.githubusercontent.com/MagicFoundation/Alcinoe/refs/heads/master/References/DocImages/material3design.jpg",
+        "link": "https://github.com/MagicFoundation/Alcinoe",
+        "tags": [ 
+            "@MagicFoundation",
+            "FMX",
+            "UI"
         ]
     },
     {
         "id": 2,
-        "name": "NextUI",
-        "img": "https://res.cloudinary.com/cosmocloudinary/image/upload/freesets/components/nextui",
-        "link": "https://nextui.org",
+        "name": "Codrut-Fluent-Design-System",
+        "img": "https://i.imgur.com/j2x1WX3.png",
+        "link": "https://github.com/Codrax/Codrut-Fluent-Design-System",
         "tags": [
-            "React",
-            "Next.js",
-            "Vercel"
+            "@codrax",
+            "VCL",
+            "UI"
         ]
     }
 ]

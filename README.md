@@ -1,4 +1,5 @@
-# 🎬 DelphiKit
+# $\color{gray}{\textsf{Delphi}}\color{crimson}{\textsf{Kit}}$
+
 
 > Visualize antes de instalar: A vitrine do seu próximo componente Delphi.
 

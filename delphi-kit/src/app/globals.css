@@ -6,3 +6,26 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.pageContainer {
+  padding: 2rem 4rem 4rem 4rem;
+  /* border: 1px solid #2e2e2e; */
+}
+
+.headerText {
+  color: #a0a0a0;
+  font-size: clamp(1rem, 2vw, 1rem);
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.titleRed {
+  color: #ae1414;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}

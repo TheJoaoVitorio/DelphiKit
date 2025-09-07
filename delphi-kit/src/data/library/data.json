@@ -20,5 +20,17 @@
             "VCL",
             "UI"
         ]
+    },
+    {
+        "id": 3,
+        "name": "Delphi IDE Theme Editor",
+        "description": "Custom color highlighting for Object Pascal IDE's",
+        "link": "https://github.com/RRUZ/delphi-ide-theme-editor",
+        "img": "https://github.com/RRUZ/delphi-ide-theme-editor/blob/master/delphi-ide-theme-editor/Site%20Images/DITE.png?raw=true",
+        "tags": [
+            "IDE",
+            "theme",
+            "colors"
+        ]
     }
 ]

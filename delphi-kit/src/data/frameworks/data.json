@@ -24,11 +24,23 @@
         "id": 3,
         "name": "WebView4Delphi",
         "description": "WebView4Delphi is an open source project created by Salvador Díaz Fau to embed Edge/Chromium-based browsers in applications made with Delphi or Lazarus/FPC for Windows.",
-        "link": "WebView4Delphi is an open source project created by Salvador Díaz Fau to embed Edge/Chromium-based browsers in applications made with Delphi or Lazarus/FPC for Windows.",
+        "link": "https://github.com/salvadordf/WebView4Delphi",
         "img": "",
         "tags": [
             "WebView",
             "WebBrowser"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Horse",
+        "description": "Horse is an Express inspired web framework for Delphi and Lazarus. Designed to ease things up for fast development in a minimalist way and with high performance.",
+        "link": "https://github.com/HashLoad/horse",
+        "img": "https://github.com/HashLoad/horse/blob/master/img/horse.png?raw=true",
+        "tags": [
+            "WebFramework",
+            "rest",
+            "api"
         ]
     }
 ]

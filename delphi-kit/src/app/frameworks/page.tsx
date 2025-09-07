@@ -1,7 +1,11 @@
 import { CardDescription } from "@/src/components/CardDescription/CardDescription";
+import frameworkService from "@/src/services/frameworkService";
 
 
 export default function FrameworksPage() {
+    const api = frameworkService();
+    const frameworksItems = api.getFrameworksData();
+
     return (
         <div className="pageContainer">
             <div className="titleRed">
@@ -16,13 +20,15 @@ export default function FrameworksPage() {
 
         
             <div className="cardGrid">
-                <CardDescription
-                    img="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg"
-                    name="Roblox"
-                    description="Showcase your creations, highlight achievements, and invite others to join your games."
-                    tags={["Game", "Sandbox", "Community"]}
-                />
-
+                {frameworksItems.map((item) => (
+                    <CardDescription
+                        img={item.img}
+                        name={item.name}
+                        link={item.link}
+                        description={item.description}
+                        tags={item.tags}
+                    />
+                ))}
             </div>
         </div>
     );

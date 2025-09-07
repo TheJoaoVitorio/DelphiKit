@@ -193,11 +193,12 @@
     font-size: 0.875rem;
     color: #d1d5db;
     transition: color 0.3s ease;
-    overflow: hidden;
-    white-space: wrap;
-    max-lines: 4;
-    text-overflow: ellipsis;
     max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .cardContainer:hover .cardText p {

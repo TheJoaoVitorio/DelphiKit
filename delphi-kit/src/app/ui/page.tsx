@@ -1,6 +1,5 @@
 import libraryService from '@/src/services/libraryService';
 import { Card } from '../../components/Card/Card';
-// import styles from './page.module.css';
 import Badge from '@/src/components/Badge/Badge';
 
 export default function UiPage() {

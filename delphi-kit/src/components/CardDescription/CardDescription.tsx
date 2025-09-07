@@ -38,7 +38,7 @@ export function CardDescription({ img, name, description, tags } : CardDescripti
                         </div>
 
                         <div className={styles.cardText}>
-                            <p>{description}</p>
+                            <p title={description} >{description}</p>
                         </div>
 
                         <div className={styles.cardDivider}></div>

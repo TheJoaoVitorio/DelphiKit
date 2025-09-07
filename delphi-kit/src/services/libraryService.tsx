@@ -1,4 +1,4 @@
-import { dataLibrary } from "../data/index";
+import { dataLibrary } from "../data/library/index";
 
 export default function libraryService() {
     return {

@@ -1,0 +1,12 @@
+[
+    {
+        "id" : 1,
+        "name" : "Skia4Delphi",
+        "description" : "Skia4Delphi is a cross-platform 2D graphics API for Delphi platforms based on Google's Skia Graphics Library. It provides a comprehensive 2D API that can be used across mobile, server and desktop models to render images.",
+        "link" : "https://github.com/skia4delphi/skia4delphi",
+        "img" : "https://github.com/skia4delphi/skia4delphi/blob/main/Assets/Artwork/github-organization.png",
+        "tags" : [
+            "graphics", "vcl" , "fmx" 
+        ]
+    }
+]

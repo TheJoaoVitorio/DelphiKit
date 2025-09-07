@@ -22,6 +22,7 @@ export default function UiPage() {
             <div className="cardGrid">
                 {cardItems.map((item) => (
                     <Card
+                        key={item.id}
                         name={item.name}
                         img={item.img}
                         tags={item.tags}

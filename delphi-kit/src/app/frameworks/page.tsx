@@ -10,7 +10,7 @@ export default function FrameworksPage() {
         <div className="pageContainer">
             <div className="titleRed">
                 <h1 className="text-3xl font-bold mb-4">
-                Frameworks
+                    Frameworks
                 </h1>
             </div>
 
@@ -18,10 +18,11 @@ export default function FrameworksPage() {
                 Explore powerful Delphi frameworks that simplify your development.
             </p>
 
-        
+
             <div className="cardGrid">
                 {frameworksItems.map((item) => (
                     <CardDescription
+                        key={item.id}
                         img={item.img}
                         name={item.name}
                         link={item.link}

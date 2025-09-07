@@ -8,5 +8,16 @@
         "tags" : [
             "graphics", "vcl" , "fmx"
         ]
+    },
+    {
+        "id": 2,
+        "name": "Spring4Delphi",
+        "description": "Spring4D is an open-source code library for Embarcadero Delphi XE and higher. It consists of a number of different modules that contain a base class library (common types, interface based collection types, reflection extensions) and a dependency injection framework. It uses the Apache License 2.0.",
+        "link": "https://bitbucket.org/sglienke/spring4d/src/master",
+        "img": "https://avatars.githubusercontent.com/u/14032228?s=200&v=4",
+        "tags": [
+            "architecture",
+            "dependency-injection"
+        ]
     }
 ]

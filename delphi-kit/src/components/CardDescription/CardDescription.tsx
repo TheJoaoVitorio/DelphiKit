@@ -5,6 +5,7 @@ type CardDescriptionProps = {
     img: string;
     name: string;
     description: string;
+    link: string;
     tags: string[];
 };
 

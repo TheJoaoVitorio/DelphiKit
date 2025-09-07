@@ -45,8 +45,10 @@
     position: absolute;
     width: 15.8em;
     height: 11em;
-    /* background-color: rgba(30, 31, 38, 0.575); */
-    background-color: rgba(10, 10, 10, 0.6);
+    background-color: rgba(30, 31, 38, 0.575);
+
+    /* background-color: rgba(10, 10, 10, 0.6); */
+    /* background: linear-gradient(to bottom right, rgb(0, 0, 0), rgba(255, 0, 0, 0.056)); */
     border: 1px solid rgba(172, 172, 172, 0.1);
     border-radius: 7px;
 
@@ -98,7 +100,7 @@
     padding: 0 0.7em;
     height: 1.4em;
     border-radius: 4px;
-    background-color: #444857;
+    background-color: #ae1414;
     font-family: Montserrat, sans-serif;
     font-size: 0.7em;
     color: white;

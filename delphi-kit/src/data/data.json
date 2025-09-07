@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "shadcn/ui",
+        "img": "https://res.cloudinary.com/cosmocloudinary/image/upload/freesets/components/shadcn",
+        "link": "https://ui.shadcn.com",
+        "tags": [
+            "React",
+            "Tailwind",
+            "Chart"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "NextUI",
+        "img": "https://res.cloudinary.com/cosmocloudinary/image/upload/freesets/components/nextui",
+        "link": "https://nextui.org",
+        "tags": [
+            "React",
+            "Next.js",
+            "Vercel"
+        ]
+    }
+]

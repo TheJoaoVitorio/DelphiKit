@@ -1,0 +1,14 @@
+.bagdeSytle{
+    display: inline-flex;
+    border: 1px solid red;border: 1px solid rgba(172, 172, 172, 0.1);
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    margin-inline-start: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: crimson;
+    background-color: rgba(30, 31, 38, 0.575);
+    border-radius: 9999px;
+}

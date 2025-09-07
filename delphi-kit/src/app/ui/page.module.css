@@ -10,6 +10,10 @@
     margin-bottom: 2rem;
 }
 
+.titleRed {
+    color: #ae1414;
+}
+
 .cardGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));

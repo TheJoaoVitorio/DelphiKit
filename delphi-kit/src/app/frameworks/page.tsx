@@ -1,3 +1,4 @@
+import { CardDescription } from "@/src/components/CardDescription/CardDescription";
 
 
 export default function FrameworksPage() {
@@ -9,20 +10,20 @@ export default function FrameworksPage() {
                 </h1>
             </div>
 
-        <p className="headerText">
-            Explore powerful Delphi frameworks that simplify your development.
-        </p>
+            <p className="headerText">
+                Explore powerful Delphi frameworks that simplify your development.
+            </p>
 
+        
+            <div className="cardGrid">
+                <CardDescription
+                    img="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg"
+                    name="Roblox"
+                    description="Showcase your creations, highlight achievements, and invite others to join your games."
+                    tags={["Game", "Sandbox", "Community"]}
+                />
 
-            {/* <div className={styles.cardGrid}>
-                {cardItems.map((item) => (
-                    <Card
-                        name={item.name}
-                        img={item.img}
-                        tags={item.tags}
-                    />
-                ))}
-            </div> */}
+            </div>
         </div>
     );
 }

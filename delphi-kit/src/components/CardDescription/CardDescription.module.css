@@ -1,0 +1,327 @@
+.cardContainer {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.cardContainer:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.card {
+    position: relative;
+    width: 280px;
+    font-size: 13px;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom right, #010101, #090909, #010101);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    transition: all 0.7s ease;
+}
+
+.card:hover {
+    border-color: rgba(169, 0, 0, 0.25);
+    box-shadow: 0 15px 40px rgba(109, 0, 0, 0.123);
+}
+
+.card-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.cardGradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+    opacity: 0.4;
+    transition: opacity 0.5s ease;
+}
+
+.cardContainer:hover .cardGradient {
+    opacity: 0.6;
+}
+
+.cardCircle {
+    position: absolute;
+    bottom: -5rem;
+    left: -5rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background: linear-gradient(to top right, rgba(255, 255, 255, 0.1), transparent);
+    filter: blur(40px);
+    opacity: 0.3;
+    transition: all 0.7s ease;
+    animation: bounce 2s infinite;
+}
+
+.cardContainer:hover .cardCircle {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.cardPulse1,
+.cardPulse2 {
+    position: absolute;
+    background: rgba(250, 12, 12, 0.05);
+    border-radius: 50%;
+}
+
+.cardPulse1 {
+    top: 2.5rem;
+    left: 2.5rem;
+    width: 4rem;
+    height: 4rem;
+    filter: blur(20px);
+    animation: ping 1.5s infinite;
+}
+
+.cardPulse2 {
+    bottom: 4rem;
+    right: 4rem;
+    width: 3rem;
+    height: 3rem;
+    filter: blur(12px);
+    animation: ping 1.5s infinite;
+    animation-delay: 1s;
+}
+
+.cardSheen {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transform: skewX(-12deg) translateX(100%);
+    transition: transform 1s ease;
+}
+
+.cardContainer:hover .cardSheen {
+    transform: skewX(-12deg) translateX(-200%);
+}
+
+.cardContent {
+    position: relative;
+    z-index: 10;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.cardIconWrapper {
+    position: relative;
+    margin: 0 auto 1.5rem;
+    width: 80px;
+    height: 80px;
+}
+
+.cardIconBorder,
+.cardIconBorder2 {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+}
+
+.cardIconBorder {
+    border: 2px solid rgba(89, 14, 14, 0.2);
+    animation: ping 1.5s infinite;
+}
+
+.cardIconBorder2 {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: pulse 2s infinite;
+    animation-delay: 0.5s;
+}
+
+.cardIcon {
+    padding: 1.5rem;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s ease;
+}
+
+.cardContainer:hover .cardIcon {
+    transform: rotate(12deg) scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.cardIconInner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s ease;
+}
+
+.cardIconInner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardContainer:hover .cardIconInner {
+    transform: rotate(180deg);
+}
+
+.cardIcon svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+    transition: color 0.3s ease;
+}
+
+.cardTitle p {
+    font-size: 1.875rem;
+    font-weight: bold;
+    background: linear-gradient(to right, white, #e5e5e5, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulse 1.5s infinite;
+    margin-bottom: 1rem;
+}
+
+.cardText p {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    transition: color 0.3s ease;
+    overflow: hidden;
+    white-space: wrap;
+    max-lines: 4;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.cardContainer:hover .cardText p {
+    color: #e5e7eb;
+}
+
+.cardDivider {
+    margin: 1.5rem auto 0;
+    width: 33%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, white, transparent);
+    border-radius: 9999px;
+    transition: all 0.5s ease;
+    animation: pulse 1.5s infinite;
+}
+
+.cardContainer:hover .cardDivider {
+    width: 50%;
+    height: 4px;
+}
+
+.cardDots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+.cardDots .tag {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cardDots .tag:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.cardContainer:hover .cardDots {
+    opacity: 1;
+}
+
+.cardDots div {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: white;
+    border-radius: 50%;
+    animation: bounce 1s infinite;
+}
+
+.cardDots div:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.cardDots div:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.cardCorner {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(to bottom right, rgba(69, 32, 32, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cardContainer:hover .cardCorner {
+    opacity: 1;
+}
+
+.cardCorner.tl {
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.cardCorner.br {
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 1.5rem;
+}
+
+/* ANIMAÇÕES */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes ping {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}

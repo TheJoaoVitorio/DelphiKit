@@ -28,7 +28,13 @@ export function CardDescription({ img, name, description, tags } : CardDescripti
                             <div className={styles.cardIconBorder2}></div>
                             <div className={styles.cardIcon}>
                                 <div className={styles.cardIconInner}>
-                                    <img src={img} alt={name} />
+                                    {img ? (
+                                        <img src={img} alt={name} />
+                                    ) : (
+                                        <div className={styles.initialLetter}>
+                                            {name && name.charAt(0)}
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>

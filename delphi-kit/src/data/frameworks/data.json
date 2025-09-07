@@ -19,5 +19,16 @@
             "architecture",
             "dependency-injection"
         ]
+    },
+    {
+        "id": 3,
+        "name": "WebView4Delphi",
+        "description": "WebView4Delphi is an open source project created by Salvador Díaz Fau to embed Edge/Chromium-based browsers in applications made with Delphi or Lazarus/FPC for Windows.",
+        "link": "WebView4Delphi is an open source project created by Salvador Díaz Fau to embed Edge/Chromium-based browsers in applications made with Delphi or Lazarus/FPC for Windows.",
+        "img": "",
+        "tags": [
+            "WebView",
+            "WebBrowser"
+        ]
     }
 ]

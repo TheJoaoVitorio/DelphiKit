@@ -136,7 +136,13 @@
 }
 
 .cardIcon {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
     padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -167,6 +173,21 @@
     object-fit: cover;
 }
 
+.initialLetter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #3a3a3a;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
 .cardContainer:hover .cardIconInner {
     transform: rotate(180deg);
 }
@@ -180,7 +201,7 @@
 }
 
 .cardTitle p {
-    font-size: 1.775rem;
+    font-size: 1.275rem;
     font-weight: bold;
     background: linear-gradient(to right, white, #e5e5e5, white);
     -webkit-background-clip: text;
@@ -288,6 +309,7 @@
     right: 0;
     border-top-left-radius: 1.5rem;
 }
+
 
 /* ANIMAÇÕES */
 @keyframes bounce {

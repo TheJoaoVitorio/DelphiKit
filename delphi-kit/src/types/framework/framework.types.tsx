@@ -1,8 +1,5 @@
-export type FrameworkType = {
-    id: number,
-    name: string,
-    description: string,
-    link: string,
-    img: string,
-    tags : []
+import { BaseType } from "../baseType"
+
+export type FrameworkType = BaseType & {
+    description: string
 }

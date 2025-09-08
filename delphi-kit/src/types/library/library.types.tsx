@@ -1,7 +1,5 @@
-export type LibraryType = {
-    id: number;
-    img: string;
-    link: string;
-    name: string;
-    tags: string[];
+import { BaseType } from "../baseType";
+
+export type LibraryType = BaseType & {
+    description?: string;
 }

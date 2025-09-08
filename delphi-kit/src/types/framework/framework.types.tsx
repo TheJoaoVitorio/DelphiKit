@@ -1,5 +1,6 @@
 import { BaseType } from "../baseType"
 
 export type FrameworkType = BaseType & {
-    description: string
+    description: string,
+    type: "framework"
 }

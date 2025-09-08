@@ -8,7 +8,8 @@
             "@MagicFoundation",
             "FMX",
             "UI"
-        ]
+        ],
+        "type": "library"
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@
             "@codrax",
             "VCL",
             "UI"
-        ]
+        ],
+        "type": "library"
     },
     {
         "id": 3,
@@ -31,6 +33,7 @@
             "IDE",
             "theme",
             "colors"
-        ]
+        ],
+        "type": "library"
     }
 ]

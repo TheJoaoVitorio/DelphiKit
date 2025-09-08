@@ -7,7 +7,8 @@
         "img" : "https://github.com/skia4delphi/skia4delphi/blob/main/Assets/Artwork/github-organization.png?raw=true",
         "tags" : [
             "graphics", "vcl" , "fmx"
-        ]
+        ],
+        "type" : "framework"
     },
     {
         "id": 2,
@@ -18,7 +19,8 @@
         "tags": [
             "architecture",
             "dependency-injection"
-        ]
+        ],
+        "type" : "framework"
     },
     {
         "id": 3,
@@ -29,7 +31,8 @@
         "tags": [
             "WebView",
             "WebBrowser"
-        ]
+        ],
+        "type" : "framework"
     },
     {
         "id": 4,
@@ -41,6 +44,7 @@
             "WebFramework",
             "rest",
             "api"
-        ]
+        ],
+        "type" : "framework"
     }
 ]

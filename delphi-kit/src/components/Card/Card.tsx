@@ -7,11 +7,12 @@ type CardProps = {
   img: string;
   name: string;
   tags: string[];
+  category: string;
 };
 
-export function Card({ id, img, name, tags }: CardProps) {
+export function Card({ id, img, name, tags, category }: CardProps) {
   return (
-    <Link href={`/details/${id}`} className={styles.main}>
+    <Link href={`/details/${id}?type=${category}`} className={styles.main}>
       <div className={styles.card}>
         <div className={styles.card_content}>
           <div

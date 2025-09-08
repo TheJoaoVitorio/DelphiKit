@@ -2,9 +2,9 @@ import libraryService from '@/src/services/libraryService';
 import { Card } from '../../components/Card/Card';
 import Badge from '@/src/components/Badge/Badge';
 
-export default function UiPage() {
+export default async function UiPage() {
     const api = libraryService();
-    const cardItems = api.getLibraryData();
+    const cardItems = await api.getLibraryData();
 
     return (
         <div className="pageContainer">

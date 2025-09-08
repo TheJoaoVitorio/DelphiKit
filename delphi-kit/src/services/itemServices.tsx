@@ -3,7 +3,7 @@ import { dataFrameworks } from "../data/frameworks/index";
 
 const allItems = [...dataLibrary, ...dataFrameworks];
 
-function getItemByIdAndType(id: number, type: string | undefined) {
+function getItemByIdAndType(id: number, type: string) {
     if (!type) return undefined;
     
     return allItems.find((item) => item.id === id && item.type === type);

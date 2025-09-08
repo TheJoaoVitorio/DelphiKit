@@ -2,9 +2,9 @@ import { CardDescription } from "@/src/components/CardDescription/CardDescriptio
 import frameworkService from "@/src/services/frameworkService";
 
 
-export default function FrameworksPage() {
+export default async function FrameworksPage() {
     const api = frameworkService();
-    const frameworksItems = api.getFrameworksData();
+    const frameworksItems = await api.getFrameworksData();
 
     return (
         <div className="pageContainer">

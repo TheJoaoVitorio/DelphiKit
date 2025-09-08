@@ -1,14 +1,21 @@
 import { itemService } from "@/src/services/itemServices";
-import LibraryService from "@/src/services/libraryService";
 
-type Props = {
-  params: { id: string };
-  searchParams : { type: string };
-};
+export default async function DetailsPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ type: string }>;
+}) {
+  const resolvedParams = await params;
+  const resolvedSearchParams = await searchParams;
 
-export default function DetailsPage({ params, searchParams }: Props) {
   const api = itemService();
-  const item = api.getItemByIdAndType(Number(params.id), searchParams.type);
+
+  const id = Number(resolvedParams.id);
+  const type = resolvedSearchParams.type;
+
+  const item = api.getItemByIdAndType(id, type);
 
   if (!item) {
     return <div className="p-4">Item not found</div>;
@@ -16,7 +23,7 @@ export default function DetailsPage({ params, searchParams }: Props) {
 
   return (
     <div className="pageContainer">
-      <div className="titleRed" >
+      <div className="titleRed">
         {item.name}
       </div>
     </div>

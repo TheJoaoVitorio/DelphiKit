@@ -4,6 +4,8 @@
         "name" : "Skia4Delphi",
         "description" : "Skia4Delphi is a cross-platform 2D graphics API for Delphi platforms based on Google's Skia Graphics Library. It provides a comprehensive 2D API that can be used across mobile, server and desktop models to render images.",
         "link" : "https://github.com/skia4delphi/skia4delphi",
+        "creator" : "skia4delphi",
+        "avatar" : "",
         "img" : "https://github.com/skia4delphi/skia4delphi/blob/main/Assets/Artwork/github-organization.png?raw=true",
         "tags" : [
             "graphics", "vcl" , "fmx"
@@ -15,6 +17,8 @@
         "name": "Spring4Delphi",
         "description": "Spring4D is an open-source code library for Embarcadero Delphi XE and higher. It consists of a number of different modules that contain a base class library (common types, interface based collection types, reflection extensions) and a dependency injection framework. It uses the Apache License 2.0.",
         "link": "https://bitbucket.org/sglienke/spring4d/src/master",
+        "creator": "sglienke",
+        "avatar": "",
         "img": "https://avatars.githubusercontent.com/u/14032228?s=200&v=4",
         "tags": [
             "architecture",
@@ -27,6 +31,8 @@
         "name": "WebView4Delphi",
         "description": "WebView4Delphi is an open source project created by Salvador Díaz Fau to embed Edge/Chromium-based browsers in applications made with Delphi or Lazarus/FPC for Windows.",
         "link": "https://github.com/salvadordf/WebView4Delphi",
+        "creator": "sglienke",
+        "avatar": "",
         "img": "",
         "tags": [
             "WebView",
@@ -39,6 +45,8 @@
         "name": "Horse",
         "description": "Horse is an Express inspired web framework for Delphi and Lazarus. Designed to ease things up for fast development in a minimalist way and with high performance.",
         "link": "https://github.com/HashLoad/horse",
+        "creator": "sglienke",
+        "avatar": "",
         "img": "https://github.com/HashLoad/horse/blob/master/img/horse.png?raw=true",
         "tags": [
             "WebFramework",

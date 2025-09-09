@@ -2,8 +2,11 @@
     {
         "id": 1,
         "name": "Alcinoe",
+        "description": "",
         "img": "https://raw.githubusercontent.com/MagicFoundation/Alcinoe/refs/heads/master/References/DocImages/material3design.jpg",
         "link": "https://github.com/MagicFoundation/Alcinoe",
+        "creator" : "MagicFoundation",        
+        "avatar" : "",
         "tags": [ 
             "@MagicFoundation",
             "FMX",
@@ -14,8 +17,11 @@
     {
         "id": 2,
         "name": "Codrut-Fluent-Design-System",
+        "description": "",
         "img": "https://i.imgur.com/j2x1WX3.png",
         "link": "https://github.com/Codrax/Codrut-Fluent-Design-System",
+        "creator" : "Codrax",        
+        "avatar" : "",
         "tags": [
             "@codrax",
             "VCL",
@@ -28,6 +34,8 @@
         "name": "Delphi IDE Theme Editor",
         "description": "Custom color highlighting for Object Pascal IDE's",
         "link": "https://github.com/RRUZ/delphi-ide-theme-editor",
+        "creator" : "RRUZ",
+        "avatar" : "",
         "img": "https://github.com/RRUZ/delphi-ide-theme-editor/blob/master/delphi-ide-theme-editor/Site%20Images/DITE.png?raw=true",
         "tags": [
             "IDE",

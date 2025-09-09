@@ -1,0 +1,122 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 4rem 4rem 4rem;
+}
+
+.creatorInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.card {
+    width: 100%;
+    max-width: 1000px; 
+    background-color: rgba(18, 18, 18, 0.7); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2.5rem;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(200, 0, 0, 0.25) 0%, rgba(18, 18, 18, 0) 70%);
+    pointer-events: none; 
+    z-index: 0;
+}
+
+.cardContent {
+    display: flex;
+    gap: 2.5rem;
+    align-items: stretch; 
+    position: relative; 
+    z-index: 1;
+    /* border: 1px solid teal; */
+}
+
+.cardSectionLeft {
+    flex-shrink: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.profileImage {
+    border-radius: 16px;
+    background-color: #111;
+    object-fit: fill;
+}
+
+.cardSectionRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    color: #e0e0e0;
+    /* height: 100%; */
+    /* border: 1px solid red; */
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.companyLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #c4c4c4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.companyLink:hover {
+    color: #ffffff;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #b3b3b3;
+}
+
+.tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    color: #ffcccc;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}

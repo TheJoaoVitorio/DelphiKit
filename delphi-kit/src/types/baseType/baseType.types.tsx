@@ -3,5 +3,7 @@ export type BaseType = {
     name: string;
     img: string;
     link: string;
+    creator: string;
+    avatar: string;
     tags: string[]
 }

@@ -117,3 +117,12 @@
     font-size: 0.8rem;
     font-weight: 500;
 }
+
+.profileLetter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: clamp(5rem, 2vw, 2.5rem);
+    font-weight: 700;
+}

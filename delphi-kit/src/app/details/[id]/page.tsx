@@ -36,7 +36,12 @@ export default async function DetailsPage({ params, searchParams} : {
             <div className={styles.card}>
                 <div className={styles.cardContent}>
                     <div className={styles.cardSectionLeft}>
-                        <Image src={item.img} alt={item.name} width={250} height={250} className={styles.profileImage} />
+                        {item.img ? (
+                            <Image src={item.img} alt={item.name} width={250} height={250} className={styles.profileImage} />
+                        ) : (
+                            <div className={`${styles.profileLetter} ${styles.profileImage}`}  style={{ width: 250, height: 250}}> {item.name.charAt(0)} </div>
+                        )}
+                        
                         <div className={styles.creatorInfo}>
                             <Image src={item.avatar} alt={`${item.creator} avatar`} width={30} height={30} className={styles.avatar} />
                             <span>{item.creator}</span>                            

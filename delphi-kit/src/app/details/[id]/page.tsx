@@ -1,5 +1,5 @@
 import { itemService } from "@/src/services/itemServices";
-import styles  from "../[id]/page.module.css";
+import styles from "../[id]/page.module.css";
 import Image from 'next/image';
 import Link from 'next/link';
 import { extractRepoGitHubUrl } from '../../../utils/urlUtils';
@@ -9,7 +9,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export type BaseType = {
     id: number;
     name: string;
-    img: string; 
+    img: string;
     link: string;
     creator: string;
     avatar: string;
@@ -17,7 +17,7 @@ export type BaseType = {
     description: string;
 }
 
-export default async function DetailsPage({ params, searchParams} : {
+export default async function DetailsPage({ params, searchParams }: {
     params: Promise<{ id: string }>;
     searchParams: Promise<{ type: string }>;
 }) {
@@ -39,27 +39,33 @@ export default async function DetailsPage({ params, searchParams} : {
                         {item.img ? (
                             <Image src={item.img} alt={item.name} width={250} height={250} className={styles.profileImage} />
                         ) : (
-                            <div className={`${styles.profileLetter} ${styles.profileImage}`}  style={{ width: 250, height: 250}}> {item.name.charAt(0)} </div>
+                            <div className={`${styles.profileLetter} ${styles.profileImage}`} style={{ width: 250, height: 250 }}> {item.name.charAt(0)} </div>
                         )}
-                        
+
                         <div className={styles.creatorInfo}>
                             <Image src={item.avatar} alt={`${item.creator} avatar`} width={30} height={30} className={styles.avatar} />
-                            <span>{item.creator}</span>                            
+                            <span>{item.creator}</span>
                         </div>
                     </div>
                     <div className={styles.cardSectionRight}>
                         <div className="gap-2" >
                             <h1 className={styles.name}>{item.name}</h1>
-                            <Link href={item.link} target="_blank" className={styles.companyLink}>   
-                                <GitHubIcon />                               
-                                {extractRepoGitHubUrl(item.link)}
+                            <Link href={item.link} target="_blank" className={styles.companyLink}>
+                                {extractRepoGitHubUrl(item.link) ? (
+                                    <>
+                                        <GitHubIcon />
+                                        {extractRepoGitHubUrl(item.link)}
+                                    </>
+                                ) : (
+                                    item.link
+                                )}
                             </Link>
                         </div>
                         <p className={styles.description}>{item.description}</p>
-                        
+
                         <div className={styles.tagsContainer}>
                             {item.tags.map((tag, index) => (
-                                <div key={index} className={styles.tag}>                                    
+                                <div key={index} className={styles.tag}>
                                     <span>{tag}</span>
                                 </div>
                             ))}

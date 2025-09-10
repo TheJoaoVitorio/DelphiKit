@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { extractRepoGitHubUrl } from '../../../utils/urlUtils';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { itemRepository } from "@/src/repositories/itemRepository";
 
 
 export type BaseType = {
@@ -24,8 +25,8 @@ export default async function DetailsPage({ params, searchParams }: {
     const { id } = await params;
     const { type } = await searchParams;
 
-    const api = itemService();
-    const item = await api.getItemByIdAndType(Number(id), type);
+    const item = await itemRepository.getItemByIdAndType(parseInt(id), type);
+
 
     if (!item) {
         return <div className="p-4">Item not found</div>;
@@ -43,12 +44,16 @@ export default async function DetailsPage({ params, searchParams }: {
                         )}
 
                         <div className={styles.creatorInfo}>
-                            <Image src={item.avatar} alt={`${item.creator} avatar`} width={30} height={30} className={styles.avatar} />
+                            {item.avatar ? (
+                                <Image src={item.avatar} alt={`${item.creator} avatar`} width={30} height={30} className={styles.avatar} />
+                            )  : (
+                                <span className={` ${styles.avatarProfileLetter}`} >{item.creator.charAt(0)}</span>
+                            )}
                             <span>{item.creator}</span>
                         </div>
                     </div>
                     <div className={styles.cardSectionRight}>
-                        <div className="gap-2" >
+                        <div className={styles.titleContainer} >
                             <h1 className={styles.name}>{item.name}</h1>
                             <Link href={item.link} target="_blank" className={styles.companyLink}>
                                 {extractRepoGitHubUrl(item.link) ? (

@@ -4,6 +4,7 @@ export type BaseType = {
     img: string;
     link: string;
     creator: string;
+    description: string,
     avatar: string;
     tags: string[]
 }

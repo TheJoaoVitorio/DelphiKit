@@ -61,6 +61,7 @@ export default async function DetailsPage({ params, searchParams }: {
                                 )}
                             </Link>
                         </div>
+                        
                         <p className={styles.description}>{item.description}</p>
 
                         <div className={styles.tagsContainer}>

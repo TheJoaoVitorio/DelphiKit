@@ -126,3 +126,10 @@
     font-size: clamp(5rem, 2vw, 2.5rem);
     font-weight: 700;
 }
+
+@media (max-width: 768px) {
+   .cardContent{
+    flex-direction: column;
+    align-items: center;
+   }
+}

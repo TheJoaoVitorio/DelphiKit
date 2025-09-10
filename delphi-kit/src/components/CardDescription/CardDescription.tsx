@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./CardDescription.module.css";
+import Link from "next/link";
 
 type CardDescriptionProps = {
+    id: number;
+    category: string;
     img: string;
     name: string;
     description: string;
@@ -9,10 +12,11 @@ type CardDescriptionProps = {
     tags: string[];
 };
 
-export function CardDescription({ img, name, description, tags } : CardDescriptionProps) {
+export function CardDescription({ id, category, img, name, description, tags } : CardDescriptionProps) {
     return (
         <div className={styles.cardContainer}>
-            <div className={styles.card}>
+            <Link href={`/details/${id}?type=${category}`} className={styles.cardLink} >
+                <div className={styles.card}>
                 <div className={styles.cardBg}>
                     <div className={styles.cardGradient}></div>
                     <div className={styles.cardCircle}></div>
@@ -60,6 +64,7 @@ export function CardDescription({ img, name, description, tags } : CardDescripti
                 <div className={`${styles.cardCorner} ${styles.tl}`}></div>
                 <div className={`${styles.cardCorner} ${styles.br}`}></div>
             </div>
+            </Link>
         </div>
     );
 }

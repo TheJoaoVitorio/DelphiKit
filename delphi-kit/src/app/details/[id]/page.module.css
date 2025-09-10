@@ -48,7 +48,6 @@
     align-items: stretch; 
     position: relative; 
     z-index: 1;
-    /* border: 1px solid teal; */
 }
 
 .cardSectionLeft {
@@ -62,7 +61,7 @@
 .profileImage {
     border-radius: 16px;
     background-color: #111;
-    object-fit: fill;
+    object-fit: contain;
 }
 
 .cardSectionRight {
@@ -71,8 +70,6 @@
     justify-content: space-between;
     gap: 1rem;
     color: #e0e0e0;
-    /* height: 100%; */
-    /* border: 1px solid red; */
 }
 
 .name {

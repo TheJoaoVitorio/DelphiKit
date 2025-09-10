@@ -4,6 +4,10 @@
     transition: transform 0.5s ease;
 }
 
+.cardLink{
+    text-decoration: none;
+}
+
 .cardContainer:hover {
     transform: scale(1.05) rotate(-1deg);
 }

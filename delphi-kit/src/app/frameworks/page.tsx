@@ -23,6 +23,8 @@ export default async function FrameworksPage() {
                 {frameworksItems.map((item) => (
                     <CardDescription
                         key={item.id}
+                        id={item.id}
+                        category={item.type}
                         img={item.img}
                         name={item.name}
                         link={item.link}

@@ -1,15 +1,24 @@
-import type { Metadata } from "next";
+"use client";
+
+import { SearchProvider, useSearchContext } from "../context/SearchContext";
+
 import { Inter } from "next/font/google";
+import {Search} from 'lucide-react';
 import "./globals.css";
+
 import { Header } from "../components/Header/Header"
+import { FloatingButton } from '@/src/components/FloatingButton/FloatingButton'
 import PageTransition from "../components/PageTransition/PageTransition"
+
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "DelphiKit",
-  description: "Link aggregator featuring Delphi repositories, visual components, and frameworks. Discover and share projects to streamline development and enhance your applications",
-};
+// Metadata foi movida para um arquivo separado metadata.ts
+
+function FloatingButtonAction(){
+  const { onSearch } = useSearchContext();
+  return <FloatingButton onClick={onSearch} icon={<Search />} />;
+}
 
 export default function RootLayout({
   children,
@@ -19,10 +28,13 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <body className={inter.className}>
-        <Header />
-        <main style={{ paddingTop: '80px' }}>
-          <PageTransition>{children}</PageTransition>
-        </main>
+        <SearchProvider>
+          <Header />
+          <main style={{ paddingTop: '80px' }}>
+            <PageTransition>{children}</PageTransition>
+          </main>
+          <FloatingButtonAction />
+        </SearchProvider>
       </body>
     </html>
   );

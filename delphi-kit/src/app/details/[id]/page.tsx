@@ -1,9 +1,11 @@
-import { itemService } from "@/src/services/itemServices";
 import styles from "../[id]/page.module.css";
 import Image from 'next/image';
 import Link from 'next/link';
-import { extractRepoGitHubUrl } from '../../../utils/urlUtils';
+
 import GitHubIcon from '@mui/icons-material/GitHub';
+import svgNotFoundMessage from '../../../assets/404 Error-bro.svg';
+
+import { extractRepoGitHubUrl } from '../../../utils/urlUtils';
 import { itemRepository } from "@/src/repositories/itemRepository";
 
 
@@ -29,7 +31,10 @@ export default async function DetailsPage({ params, searchParams }: {
 
 
     if (!item) {
-        return <div className="p-4">Item not found</div>;
+        return <div className={styles.containerPageNotFound}>
+            <Image src={svgNotFoundMessage} alt="Item não encontrado"></Image>
+            <a href="/" className={styles.primaryButton}>Voltar</a>
+        </div>;
     }
 
     return (
@@ -46,7 +51,7 @@ export default async function DetailsPage({ params, searchParams }: {
                         <div className={styles.creatorInfo}>
                             {item.avatar ? (
                                 <Image src={item.avatar} alt={`${item.creator} avatar`} width={30} height={30} className={styles.avatar} />
-                            )  : (
+                            ) : (
                                 <span className={` ${styles.avatarProfileLetter}`} >{item.creator.charAt(0)}</span>
                             )}
                             <span>{item.creator}</span>
@@ -66,7 +71,7 @@ export default async function DetailsPage({ params, searchParams }: {
                                 )}
                             </Link>
                         </div>
-                        
+
                         <p className={styles.description}>{item.description}</p>
 
                         <div className={styles.tagsContainer}>

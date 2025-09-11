@@ -9,15 +9,14 @@ import "./globals.css";
 import { Header } from "../components/Header/Header"
 import { FloatingButton } from '@/src/components/FloatingButton/FloatingButton'
 import PageTransition from "../components/PageTransition/PageTransition"
+import { SearchModal } from "@/src/components/SearchModal/SearchModal"
 
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Metadata foi movida para um arquivo separado metadata.ts
-
 function FloatingButtonAction(){
-  const { onSearch } = useSearchContext();
-  return <FloatingButton onClick={onSearch} icon={<Search />} />;
+  const { openModal } = useSearchContext();
+  return <FloatingButton onClick={openModal} icon={<Search />} />;
 }
 
 export default function RootLayout({
@@ -34,6 +33,7 @@ export default function RootLayout({
             <PageTransition>{children}</PageTransition>
           </main>
           <FloatingButtonAction />
+          <SearchModal />
         </SearchProvider>
       </body>
     </html>

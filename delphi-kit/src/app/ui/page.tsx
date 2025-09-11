@@ -11,20 +11,15 @@ import { LibraryType } from '@/src/types/library/library.types';
 export default function UiPage() {
     const [cardItems, setCardItems] = useState<LibraryType[]>([]);
     
-    const { setOnSearch } = useSearchContext();
+    const { openModal } = useSearchContext();
     
     useEffect(() => {
         const api = libraryService();
         const data = api.getLibraryData();
         setCardItems(data);
-        
-        setOnSearch(() => handleButtonClick);        
-        return () => setOnSearch(() => () => {});
     }, []);
 
-    const handleButtonClick = () => {
-        window.open('https://www.youtube.com', '_blank');
-    };
+
 
     return (
         <>

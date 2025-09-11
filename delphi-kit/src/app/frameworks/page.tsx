@@ -1,6 +1,6 @@
 import { CardDescription } from "@/src/components/CardDescription/CardDescription";
 import frameworkService from "@/src/services/frameworkService";
-
+import Badge from '@/src/components/Badge/Badge';
 
 export default async function FrameworksPage() {
     const api = frameworkService();
@@ -11,6 +11,7 @@ export default async function FrameworksPage() {
             <div className="titleRed">
                 <h1 className="text-3xl font-bold mb-4">
                     Frameworks
+                    <Badge text={frameworksItems.length.toString()} />
                 </h1>
             </div>
 

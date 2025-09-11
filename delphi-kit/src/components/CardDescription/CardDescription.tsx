@@ -15,7 +15,7 @@ type CardDescriptionProps = {
 export function CardDescription({ id, category, img, name, description, tags } : CardDescriptionProps) {
     return (
         <div className={styles.cardContainer}>
-            <Link href={`/details/${id}?type=${category}`} className={styles.cardLink} >
+            <Link href={`/details/${id}?type=${category}`} prefetch={true} className={styles.cardLink} >
                 <div className={styles.card}>
                 <div className={styles.cardBg}>
                     <div className={styles.cardGradient}></div>

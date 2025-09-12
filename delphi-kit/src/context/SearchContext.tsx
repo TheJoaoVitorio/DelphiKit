@@ -45,15 +45,13 @@ export const SearchProvider = ({ children }: { children: React.ReactNode }) => {
     
     // Buscar nas bibliotecas
     const libraries = libraryService().getLibraryData().filter(lib => 
-      lib.name.toLowerCase().includes(term) || 
-      lib.description.toLowerCase().includes(term) ||
+      lib.name.toLowerCase().includes(term) ||
       lib.tags.some(tag => tag.toLowerCase().includes(term))
     );
     
     // Buscar nos frameworks
     const frameworks = frameworkService().getFrameworksData().filter(framework => 
       framework.name.toLowerCase().includes(term) || 
-      framework.description.toLowerCase().includes(term) ||
       framework.tags.some(tag => tag.toLowerCase().includes(term))
     );
     

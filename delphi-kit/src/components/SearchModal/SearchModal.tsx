@@ -68,7 +68,7 @@ export function SearchModal() {
           <input
             ref={inputRef}
             type="text"
-            placeholder="Digite para buscar..."
+            placeholder="Search by name or tag..."
             value={searchTerm}
             onChange={handleSearchChange}
             className={styles.searchInput}
@@ -77,7 +77,7 @@ export function SearchModal() {
 
         <div className={styles.resultsContainer}>
           {searchResults.length === 0 && searchTerm ? (
-            <div className={styles.noResults}>Nenhum resultado encontrado</div>
+            <div className={styles.noResults}>No results found</div>
           ) : (
             <ul className={styles.resultsList}>
               {searchResults.map((result) => (

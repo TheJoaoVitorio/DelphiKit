@@ -5,16 +5,13 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import styles from '../docs/page.module.css'
 
 import IntroContent from './intro/page';
-
-const ApiContent = () => <div><h2>Referência da API</h2><p>Detalhes sobre os endpoints...</p></div>;
-const GuidesContent = () => <div><h2>Guias</h2><p>Como usar nosso produto...</p></div>;
+import ContributeContent from './contribute/page'
 
 
 export default function DocsPage() {
     const docsOptions = [
         { id: 'intro', label: 'DelphiKit', content: <IntroContent /> },
-        { id: 'contribute', label: 'Contribute', content: <ApiContent /> },
-        { id: 'guides', label: 'Guias', content: <GuidesContent /> },
+        { id: 'contribute', label: 'Contribute', content: <ContributeContent /> }
     ];
 
     const [selectedId, setSelectedId] = useState(docsOptions[0].id);

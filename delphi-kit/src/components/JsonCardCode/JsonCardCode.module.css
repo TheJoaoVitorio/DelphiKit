@@ -1,0 +1,68 @@
+/* Fonte para o código - opcional, mas recomendado para uma melhor aparência */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.card-code-container {
+    background-color: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(172, 172, 172, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 200px;
+    width: 200px;
+    margin: 20px auto;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+.card-code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #252526;
+    padding: 0.5rem 1rem;
+    color: #ccc;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #333;
+}
+
+.copy-button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.copy-button:hover {
+    background-color: #005a9e;
+}
+
+.copy-button:active {
+    transform: scale(0.98);
+}
+
+
+/*
+  A biblioteca react-syntax-highlighter gera o HTML com classes específicas.
+  Por exemplo, a classe "token.property" é aplicada às chaves do JSON.
+  A classe "token.string" é aplicada aos valores do tipo string.
+  Você pode sobrescrever as cores do tema aqui se quiser, por exemplo:
+*/
+/*
+.token.property {
+    color: #9CDCFE !important;  // Azul claro para as chaves
+}
+.token.string {
+    color: #CE9178 !important;  // Laranja para os valores string
+}
+.token.number {
+    color: #B5CEA8 !important; // Verde para números
+}
+.token.boolean {
+    color: #569CD6 !important; // Azul para booleanos
+}
+*/

@@ -28,9 +28,12 @@ export default function DocsPage() {
                 />
             </aside>
 
-            <main className={styles.main}>
-                {activeOption?.content}
-            </main>
+            <div className={styles.mainContainer} >
+                <main className={styles.main}>
+                    {activeOption?.content}
+                </main>
+            </div>
+            
         </div>
     );
 }

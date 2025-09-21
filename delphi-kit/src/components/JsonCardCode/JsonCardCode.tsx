@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
+import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+// import { srcery } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import styles from './JsonCardCode.module.css';
 
 const JsonCardCode = ({ jsonData }: { jsonData: any }) => {
-    const [buttonText, setButtonText] = useState('Copied');
+    const [buttonText, setButtonText] = useState('Copy');
     const [isCopied, setIsCopied] = useState(false);
 
     const jsonString = JSON.stringify(jsonData, null, 2);
@@ -42,12 +42,12 @@ const JsonCardCode = ({ jsonData }: { jsonData: any }) => {
             <div className={styles.cardCodeBody}>
                 <SyntaxHighlighter
                     language="json"
-                    style={vscDarkPlus}
+                    style={coldarkDark}
                     customStyle={{
                         margin: 0,
                         padding: '1rem',
                         backgroundColor: 'transparent',
-                        fontSize: '14px',
+                        fontSize: '12px',
                     }}
                     codeTagProps={{
                         style: {

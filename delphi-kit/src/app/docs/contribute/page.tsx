@@ -5,16 +5,16 @@ export default function ContributePageDocs() {
 
     const dataJsonLibrary = {
         "id": 99,
-        "name": "Nome da Sua Biblioteca Incrível",
-        "description": "Uma descrição clara e objetiva sobre o que sua biblioteca faz.",
-        "img": "https://caminho/para/sua/imagem_preview.png?raw=true",
-        "link": "https://github.com/usuario/sua-biblioteca",
-        "creator": "SeuUsuario",
+        "name": "NameLibrary",
+        "description": "A clear and objective description of what your library does.",
+        "img": "https://link/for/you/image_preview.png?raw=true",
+        "link": "https://github.com/user/nameLibrary",
+        "creator": "YouUser",
         "avatar": "https://avatars.githubusercontent.com/u/SeuId?v=4",
         "tags": [
             "UI",
             "VCL",
-            "Componente"
+            "Component"
         ],
         "type": "library"
     };
@@ -37,9 +37,12 @@ export default function ContributePageDocs() {
             <h5>3. Add the Data</h5>
             <h5>Open the chosen JSON file and add a new object to the end of the list.</h5>
             <h5>Templates</h5>
-            <JsonCardCode
-                jsonData={dataJsonLibrary}
-            />
+            <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+                <JsonCardCode
+                    jsonData={dataJsonLibrary}
+                />
+            </div>
+            
         </div>
     )
 }

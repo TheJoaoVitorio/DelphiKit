@@ -29,5 +29,5 @@ export const itemRepository = {
     }
 
     return item;
-  },
+  }
 };

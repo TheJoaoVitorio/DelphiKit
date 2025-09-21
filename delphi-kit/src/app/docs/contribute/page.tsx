@@ -3,7 +3,7 @@ import JsonCardCode from '../../../components/JsonCardCode/JsonCardCode'
 
 export default function ContributePageDocs() {
 
-    const dataJsonLibrary = {
+    const dataJsonLibrary = [{
         "id": 99,
         "name": "NameLibrary",
         "description": "A clear and objective description of what your library does.",
@@ -16,8 +16,24 @@ export default function ContributePageDocs() {
             "VCL",
             "Component"
         ],
-        "type": "library"
-    };
+        "type": "library",
+
+    }, {
+        "id": 100,
+        "name": "NameFramework",
+        "description": "description",
+        "link": "https://github.com/userDev/frameworkDelphi",
+        "creator": "userDev",
+        "avatar": "",
+        "img": "https://github.com/userDev/frameworkDelphi/frameworkImage.png?raw=true",
+        "tags": [
+            "WebFramework",
+            "rest",
+            "api"
+        ],
+        "type": "framework"
+    }
+    ];
 
     return (
         <div>
@@ -37,12 +53,14 @@ export default function ContributePageDocs() {
             <h5>3. Add the Data</h5>
             <h5>Open the chosen JSON file and add a new object to the end of the list.</h5>
             <h5>Templates</h5>
-            <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
-                <JsonCardCode
-                    jsonData={dataJsonLibrary}
-                />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                {dataJsonLibrary.map((item) => (
+                    <JsonCardCode
+                        key={item.id}
+                        jsonData={item} />
+                ))}
             </div>
-            
+
         </div>
     )
 }

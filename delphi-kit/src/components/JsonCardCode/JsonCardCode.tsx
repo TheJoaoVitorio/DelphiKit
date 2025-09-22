@@ -1,7 +1,8 @@
+"use client";
+
 import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-// import { srcery } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import styles from './JsonCardCode.module.css';
 
 const JsonCardCode = ({ jsonData }: { jsonData: any }) => {

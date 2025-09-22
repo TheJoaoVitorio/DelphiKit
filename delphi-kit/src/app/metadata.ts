@@ -15,3 +15,10 @@ export const metadata: Metadata = {
     shortcut: "/logo.png",
   },
 };
+
+export function generateMetadata(title?: string) {
+  return {
+    ...metadata,
+    title: title ? `DelphiKit - ${title}` : "DelphiKit",
+  };
+}

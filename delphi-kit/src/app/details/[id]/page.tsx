@@ -1,12 +1,14 @@
 import styles from "../[id]/page.module.css";
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from "next";
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import svgNotFoundMessage from '../../../assets/404 Error-bro.svg';
 
 import { extractRepoGitHubUrl } from '../../../utils/urlUtils';
 import { itemRepository } from "@/src/repositories/itemRepository";
+import { generateMetadata as baseGenerateMetadata } from "../../metadata";
 
 
 export type BaseType = {
@@ -18,6 +20,18 @@ export type BaseType = {
     avatar: string;
     tags: string[];
     description: string;
+}
+
+export async function generateMetadata({ params, searchParams }: {
+    params: Promise<{ id: string }>;
+    searchParams: Promise<{ type: string }>;
+}): Promise<Metadata> {
+    const { id } = await params;
+    const { type } = await searchParams;
+
+    const item = await itemRepository.getItemByIdAndType(parseInt(id), type);
+    
+    return baseGenerateMetadata(item?.name || "Detalhes");
 }
 
 export default async function DetailsPage({ params, searchParams }: {

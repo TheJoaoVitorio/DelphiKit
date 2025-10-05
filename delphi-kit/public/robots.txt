@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://delphi-kit.vercel.app
+
+# Sitemaps
+Sitemap: https://delphi-kit.vercel.app/sitemap.xml

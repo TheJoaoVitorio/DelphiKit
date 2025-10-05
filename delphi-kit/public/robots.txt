@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://delphi-kit.vercel.app
+Host: https://delphikit.vercel.app
 
 # Sitemaps
-Sitemap: https://delphi-kit.vercel.app/sitemap.xml
+Sitemap: https://delphikit.vercel.app/sitemap.xml

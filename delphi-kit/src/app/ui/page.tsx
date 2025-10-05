@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { useSearchContext } from "@/src/context/SearchContext";
 import { LibraryType } from '@/src/types/library/library.types';
 
+
 export default function UiPage() {
     const [cardItems, setCardItems] = useState<LibraryType[]>([]);
     

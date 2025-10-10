@@ -52,7 +52,10 @@ export function MainSection() {
                     <a href="/frameworks" className={styles.secondaryButton}>
                         Frameworks
                     </a>
-                </div>
+                    <a href="/explore" className={styles.secondaryButton}>
+                        Explore
+                    </a>
+                </div>           
 
                 {/* Grid de Features */}
                 <div className={styles.featuresGrid}>
